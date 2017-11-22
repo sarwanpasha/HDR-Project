@@ -1,0 +1,1 @@
+rm images/*/tmo_*.jpg

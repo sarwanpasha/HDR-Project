@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.0 (4/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper]{article}
+
+\usepackage{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} command for typesetting SI units
+
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{url}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%-------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%-------------------------------------------------------------------------------
+
+\title{Project Definition: \\ HDR imaging\\ Multimedia Communications AS 2015} %Title
+
+\author{Taivo Pungas \\ 15-928-336} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+
+%-------------------------------------------------------------------------------
+%	SECTION 1
+%-------------------------------------------------------------------------------
+
+\section{Motivation}
+Most classified ads -- ranging from real estate to used guitars -- contain images. In most cases these images are taken by non-experts, and even when a professional photographer is used, photos might not reflect the advertised object accurately; one possible cause is the low dynamic range of the images.
+
+Assuming the look and feel of images play an important part in buying decisions, we naturally get to the questions: do scenes or objects depicted in HDR images look better compared to LDR images? Which tone mapping operator (TMO) gives the best result?
+
+%-------------------------------------------------------------------------------
+%	SECTION 2
+%-------------------------------------------------------------------------------
+
+\section{Approach}
+
+I will:
+\begin{enumerate}
+	\item Create HDR images by combining multiple images taken at different exposures and tone-map the images using a Matlab toolbox\footnote{\url{https://github.com/banterle/HDR_Toolbox}} from \cite{Banterle:2011}.
+	\item In a survey\footnote{Potentially using the Amazon Mechanical Turk Sentiment App: \url{https://requester.mturk.com/create/sentiment/about}}, ask users how pleasant and realistic the images are.
+	\item Automatically extract aesthetic quality scores from the image, using the method from \cite{aydin2015automated}.
+	\item Compare the results of LDR images and different TMOs for HDR images.
+\end{enumerate}
+
+
+%-------------------------------------------------------------------------------
+%	SECTION 3
+%-------------------------------------------------------------------------------
+
+\section{Expected Outcome}
+I will rank different TMOs and compare them with LDR images. I will find out whether this ranking depends on the object (person vs dog vs landscape), lighting conditions and possibly other factors.
+
+
+%-------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%-------------------------------------------------------------------------------
+
+\bibliographystyle{unsrt}
+
+\bibliography{report}
+
+%-------------------------------------------------------------------------------
+
+
+\end{document}
